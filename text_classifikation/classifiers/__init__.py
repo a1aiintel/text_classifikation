@@ -11,6 +11,8 @@ from sklearn.metrics import accuracy_score, classification_report, \
 
 import json
 
+from pprint import pprint
+
 
 class BaseClassifier(object):
     def __init__(self, name):
@@ -171,16 +173,8 @@ class BaseClassifier(object):
         self.text_clf = joblib.load(path)
         return self
 
-    @staticmethod
-    def load_data(filename):
-        train_data = []
-        target_data = []
-        with open(filename, 'r') as f:
-            for line in f:
-                label = line.split(" ")[0]
-                question = " ".join(line.split(" ")[1:])
-                train_data.append(question.strip())
-                target_data.append(label.strip())
+    def load_data(self, filename):
+        raise NotImplementedError
         return train_data, target_data
 
     def load_test_data(self, filename):

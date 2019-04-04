@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='text_classification',
+    name='text_classifikation',
     version='0.1',
     packages=['text_classifikation', 'text_classifikation.features',
               'text_classifikation.classifiers',
@@ -16,7 +16,7 @@ setup(
               'text_classifikation.classifiers.gradboost',
               'text_classifikation.classifiers.perceptron',
               'text_classifikation.classifiers.passive_agressive'],
-    url='',
+    url='https://github.com/JarbasAl/text_classifikation',
     license='MIT',
     author='jarbasAI',
     author_email='jarbasai@mailfence.com',
